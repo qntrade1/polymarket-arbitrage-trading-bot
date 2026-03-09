@@ -1,10 +1,7 @@
 """
 Polymarket Arbitrage Bot Configuration File
 
-Author: apemoonspin
-Telegram: @apemoonspin
-GitHub: apemoonspin
-Twitter: @apemoonspin
+Telegram: @qntrade
 """
 import os
 from dotenv import load_dotenv
@@ -37,10 +34,3 @@ DB_LOG_FILE = os.path.join(LOG_DIR, "price_data.db")
 # Trading settings
 MIN_TRADE_SIZE = float(os.getenv("MIN_TRADE_SIZE", "0.01"))  # Minimum trade amount
 MAX_SLIPPAGE = float(os.getenv("MAX_SLIPPAGE", "0.01"))  # Maximum slippage (1%)
-
-# Strategy 5: Long-Shot Floor Buying settings
-ENABLE_STRATEGY_5 = os.getenv("ENABLE_STRATEGY_5", "false").lower() == "true"  # Enable Strategy 5
-STRATEGY_5_MAX_PRICE = float(os.getenv("STRATEGY_5_MAX_PRICE", "0.001"))  # Maximum YES price to target (0.1¢)
-STRATEGY_5_BET_SIZE = float(os.getenv("STRATEGY_5_BET_SIZE", "0.01"))  # Bet size per market ($0.01)
-STRATEGY_5_MAX_MARKETS = int(os.getenv("STRATEGY_5_MAX_MARKETS", "1000"))  # Maximum markets to bet on simultaneously
-STRATEGY_5_MIN_PROBABILITY = float(os.getenv("STRATEGY_5_MIN_PROBABILITY", "0.0001"))  # Minimum probability threshold (0.01%)
